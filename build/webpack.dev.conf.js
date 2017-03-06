@@ -22,9 +22,9 @@ module.exports = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),
-    // new ExtractTextPlugin({
-    //   filename: utils.assetsPath('[name].[contenthash].css')
-    // }),
+    new ExtractTextPlugin({
+      filename: utils.assetsPath('css/[name].[contenthash].css')
+    }),
 
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
     new webpack.HotModuleReplacementPlugin(),
