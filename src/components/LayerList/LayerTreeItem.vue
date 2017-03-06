@@ -1,7 +1,7 @@
 <template>
 
 	<ul v-if="isRoot" class="tile__root gu-unselectable">
-		<layer-tree-item :model="listItem" :itemIndex="listKey" v-for="(listItem, listKey) in model"></layer-tree-item>
+		<layer-tree-item :model="listItem" :itemIndex="listKey" key="listKey" v-for="(listItem, listKey) in model"></layer-tree-item>
 	</ul>
 
 	<li v-else-if="isFolder" class="tile tile__folder">
@@ -10,6 +10,7 @@
 			<li hidden></li>
 			<layer-tree-item
 					v-for="(listItem, listKey) in model.children"
+					key="listKey"
 					:model="listItem"
 					:itemIndex="listKey"
 					:data-group="itemIndex"></layer-tree-item>
