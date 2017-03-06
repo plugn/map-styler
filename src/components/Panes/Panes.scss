@@ -1,0 +1,41 @@
+.panes {
+	box-sizing: border-box;
+	display: flex;
+	height: 100%;
+
+	> .pane {
+		flex-grow: 1;
+	}
+
+	> .el-resizer {
+		width: 3px;
+		background: #ccc;
+	}
+
+
+	> .resizable {
+		width: 230px;
+	}
+
+	> .scrollable-y {
+		overflow-y: auto;
+	}
+
+	> .map-pane {
+		width: 800px;
+	}
+}
+
+.pane {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.toolbar {
+	padding: 8px 12px;
+}
+
+.body {
+	flex-grow: 1;
+}

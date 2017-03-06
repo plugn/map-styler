@@ -1,0 +1,18 @@
+$dir:    top;
+$blue:   #056ef0;
+$column: 20px;
+
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+.box {
+	@include border-radius($column);
+	.hello & {
+		background-color: aquamarine;
+	}
+}
